@@ -7,7 +7,7 @@ import { StyledImage, StyledAppBar } from './styled';
 
 const NavBar = () => {
   return (
-    <StyledAppBar position="static">
+    <StyledAppBar position="fixed">
       <Toolbar>
         <StyledImage src={Logo} alt="logo" />
       </Toolbar>

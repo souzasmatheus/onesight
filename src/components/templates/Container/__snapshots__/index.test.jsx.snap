@@ -6,10 +6,10 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-dlfnbm NFyLx"
+        class="sc-dlfnbm dhFOIP"
       >
         <header
-          class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary sc-gsTCUz htEsKP MuiPaper-elevation4"
+          class="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary sc-gsTCUz htEsKP mui-fixed MuiPaper-elevation4"
         >
           <div
             class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
@@ -29,10 +29,10 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-dlfnbm NFyLx"
+      class="sc-dlfnbm dhFOIP"
     >
       <header
-        class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary sc-gsTCUz htEsKP MuiPaper-elevation4"
+        class="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary sc-gsTCUz htEsKP mui-fixed MuiPaper-elevation4"
       >
         <div
           class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
