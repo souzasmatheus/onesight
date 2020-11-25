@@ -21,8 +21,8 @@ const SignIn = () => (
         }
       />
       <CardContent>
-        <TextField type="email" label="E-mail" fullWidth />
-        <TextField type="password" label="Password" fullWidth />
+        <TextField margin="dense" type="email" label="E-mail" fullWidth />
+        <TextField margin="dense" type="password" label="Password" fullWidth />
       </CardContent>
       <StyledCardActions>
         <Button variant="outlined">Sign in</Button>
