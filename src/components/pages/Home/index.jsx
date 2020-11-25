@@ -12,10 +12,11 @@ import VideoIcon from '@material-ui/icons/OndemandVideo';
 import Paper from '@material-ui/core/Paper';
 
 import { Container } from '~/components/templates';
+import { Search } from '~/components/molecules';
 
 import { StyledTableContainer, Wrapper, StyledAvatar } from './styled';
 
-const receipts = [
+const recipes = [
   {
     src:
       'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=953&q=80',
@@ -35,28 +36,29 @@ const receipts = [
 const Home = () => (
   <Container>
     <Wrapper>
+      <Search />
       <StyledTableContainer component={Paper}>
         <Table>
           <TableHead>
             <TableRow>
               <TableCell align="center">Click to expand</TableCell>
-              <TableCell align="right">Receipt</TableCell>
+              <TableCell align="right">Recipe</TableCell>
               <TableCell align="right">Category</TableCell>
               <TableCell align="right">Watch now!</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {receipts.map((receipt) => (
+            {recipes.map((recipe) => (
               <TableRow>
                 <TableCell align="left">
-                  <StyledAvatar src={`${receipt.src}`} />
+                  <StyledAvatar src={`${recipe.src}`} />
                 </TableCell>
-                <TableCell align="right">{receipt.name}</TableCell>
-                <TableCell align="right">{receipt.category}</TableCell>
+                <TableCell align="right">{recipe.name}</TableCell>
+                <TableCell align="right">{recipe.category}</TableCell>
                 <TableCell align="right">
                   <IconButton
                     onClick={() => {
-                      window.open(receipt.link);
+                      window.open(recipe.link);
                     }}
                   >
                     <VideoIcon />
