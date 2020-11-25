@@ -1,5 +1,11 @@
 import React from 'react';
 
-const SignUp = () => <h1>SignUp</h1>;
+import { Container } from '../../templates';
+
+const SignUp = () => (
+  <Container>
+    <h1>SignUp</h1>
+  </Container>
+);
 
 export default SignUp;
