@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 
 import NavBar from './index';
 
-import { MockedTheme } from '../../../../test/mocks/providers';
+import { MockedTheme } from '~/../test/mocks/providers';
 
 describe('<NavBar />', () => {
   it('should match the snapshot test', () => {

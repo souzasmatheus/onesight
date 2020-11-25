@@ -1,7 +1,7 @@
 import React from 'react';
 import Toolbar from '@material-ui/core/Toolbar';
 
-import Logo from '../../../assets/images/logo.png';
+import Logo from '~/assets/images/logo.png';
 
 import { StyledImage, StyledAppBar } from './styled';
 

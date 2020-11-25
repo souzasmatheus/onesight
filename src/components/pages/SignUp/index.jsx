@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container } from '../../templates';
+import { Container } from '~/components/templates';
 
 const SignUp = () => (
   <Container>
