@@ -5,11 +5,11 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="sc-dlfnbm dhFOIP"
+      <main
+        class="sc-eCssSg gUNOuY"
       >
         <header
-          class="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary sc-gsTCUz htEsKP mui-fixed MuiPaper-elevation4"
+          class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary sc-gsTCUz htEsKP MuiPaper-elevation4"
         >
           <div
             class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
@@ -24,15 +24,15 @@ Object {
         <p>
           Test child node
         </p>
-      </div>
+      </main>
     </div>
   </body>,
   "container": <div>
-    <div
-      class="sc-dlfnbm dhFOIP"
+    <main
+      class="sc-eCssSg gUNOuY"
     >
       <header
-        class="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary sc-gsTCUz htEsKP mui-fixed MuiPaper-elevation4"
+        class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary sc-gsTCUz htEsKP MuiPaper-elevation4"
       >
         <div
           class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
@@ -47,7 +47,7 @@ Object {
       <p>
         Test child node
       </p>
-    </div>
+    </main>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

@@ -1,39 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<NavBar /> should match the snapshot test 1`] = `
+exports[`<Form /> should match snapshot test 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <header
-        class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary sc-gsTCUz htEsKP MuiPaper-elevation4"
+      <div
+        class="sc-gsTCUz gSDPcN"
       >
         <div
-          class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+          class="MuiPaper-root MuiCard-root sc-bdfBwQ dIQhNI MuiPaper-elevation1 MuiPaper-rounded"
         >
-          <img
-            alt="logo"
-            class="sc-bdfBwQ iDDmfc"
-            src="logo.png"
-          />
+          Test child
         </div>
-      </header>
+      </div>
     </div>
   </body>,
   "container": <div>
-    <header
-      class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary sc-gsTCUz htEsKP MuiPaper-elevation4"
+    <div
+      class="sc-gsTCUz gSDPcN"
     >
       <div
-        class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+        class="MuiPaper-root MuiCard-root sc-bdfBwQ dIQhNI MuiPaper-elevation1 MuiPaper-rounded"
       >
-        <img
-          alt="logo"
-          class="sc-bdfBwQ iDDmfc"
-          src="logo.png"
-        />
+        Test child
       </div>
-    </header>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

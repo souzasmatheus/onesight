@@ -4,14 +4,15 @@ import CardContent from '@material-ui/core/CardContent';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
-import { StyledCard, StyledCardActions, StyledCardHeader } from './styled';
+import { StyledCardActions, StyledCardHeader } from './styled';
 
 import { Container } from '~/components/templates';
 import { StyledLink } from '~/components/atoms';
+import { Form } from '~/components/molecules';
 
 const SignIn = () => (
   <Container>
-    <StyledCard>
+    <Form>
       <StyledCardHeader
         title="Sign in"
         subheader={
@@ -27,7 +28,7 @@ const SignIn = () => (
       <StyledCardActions>
         <Button variant="outlined">Sign in</Button>
       </StyledCardActions>
-    </StyledCard>
+    </Form>
   </Container>
 );
 
