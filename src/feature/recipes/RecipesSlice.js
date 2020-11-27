@@ -4,7 +4,7 @@ import axios from 'axios';
 const initialState = {
   recipes: [],
   loading: false,
-  errors: '',
+  errors: false,
 };
 
 const recipesSlice = createSlice({
@@ -26,6 +26,7 @@ const recipesSlice = createSlice({
 export const { setLoading, setErrors, setRecipes } = recipesSlice.actions;
 export const recipesSelector = (state) => state.recipes;
 export const getRecipes = (query) => async (dispatch) => {
+  dispatch(setErrors(false));
   dispatch(setLoading(true));
   try {
     const response = await axios.get(`${process.env.REACT_APP_BASE_URL}`, {
@@ -35,7 +36,7 @@ export const getRecipes = (query) => async (dispatch) => {
     dispatch(setRecipes(response.data.meals));
   } catch (error) {
     dispatch(setLoading(false));
-    dispatch(setErrors(error));
+    dispatch(setErrors(true));
   }
 };
 
