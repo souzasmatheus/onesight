@@ -19,7 +19,11 @@ const RecipeInfo = ({ src, name, category, link, description }) => {
   return (
     <>
       <StyledRow>
-        <TableCell onClick={() => setShowDetails(true)} align="center">
+        <TableCell
+          data-testid="recipe-table-cell"
+          onClick={() => setShowDetails(true)}
+          align="center"
+        >
           <StyledAvatar src={`${src}/preview`} />
         </TableCell>
         <TableCell onClick={() => setShowDetails(true)} align="center">

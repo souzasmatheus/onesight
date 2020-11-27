@@ -1,7 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { MockedTheme, MockedRouter } from '~/../test/mocks/providers';
+import {
+  MockedTheme,
+  MockedRouter,
+  MockedStore,
+} from '~/../test/mocks/providers';
 
 import SignIn from './index';
 
@@ -9,9 +13,11 @@ describe('<SignIn />', () => {
   it('should match snapshot test', () => {
     const tree = render(
       <MockedRouter>
-        <MockedTheme>
-          <SignIn />
-        </MockedTheme>
+        <MockedStore>
+          <MockedTheme>
+            <SignIn />
+          </MockedTheme>
+        </MockedStore>
       </MockedRouter>,
     );
 
