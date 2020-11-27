@@ -51,7 +51,7 @@ const SignUp = () => {
         email,
         password,
       );
-      dispatch(setUser(user));
+      dispatch(setUser(user.email));
     } catch (e) {
       setLoading(false);
       setError(e.message);
