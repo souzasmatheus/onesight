@@ -5,21 +5,38 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-import { SignIn, SignUp, Home } from './components/pages';
+import { SignIn, SignUp, Home } from '~/components/pages';
+
+import { userSelector } from '~/feature/user/UserSlice';
 
 const App = () => {
-  const user = null;
+  const user = useSelector(userSelector);
 
   return (
     <Router>
       <Switch>
-        <Route path="/sign-up">
-          <SignUp />
-        </Route>
-        <Route path="/sign-in">
-          <SignIn />
-        </Route>
+        <Route
+          path="/sign-up"
+          render={({ location }) =>
+            user ? (
+              <Redirect to={{ pathname: '/', state: { from: location } }} />
+            ) : (
+              <SignUp />
+            )
+          }
+        />
+        <Route
+          path="/sign-in"
+          render={({ location }) =>
+            user ? (
+              <Redirect to={{ pathname: '/', state: { from: location } }} />
+            ) : (
+              <SignIn />
+            )
+          }
+        />
         <Route
           path="/"
           render={({ location }) =>
