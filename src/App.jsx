@@ -8,6 +8,7 @@ import {
 import { useSelector } from 'react-redux';
 
 import { SignIn, SignUp, Home } from '~/components/pages';
+import { Container } from '~/components/templates';
 
 import { userSelector } from '~/feature/user/UserSlice';
 
@@ -16,28 +17,30 @@ const App = () => {
 
   return (
     <Router>
-      <Switch>
-        <Route
-          path="/sign-up"
-          render={() => (user ? <Redirect to="/" /> : <SignUp />)}
-        />
-        <Route
-          path="/sign-in"
-          render={() => (user ? <Redirect to="/" /> : <SignIn />)}
-        />
-        <Route
-          path="/"
-          render={({ location }) =>
-            user ? (
-              <Home />
-            ) : (
-              <Redirect
-                to={{ pathname: '/sign-in', state: { from: location } }}
-              />
-            )
-          }
-        />
-      </Switch>
+      <Container>
+        <Switch>
+          <Route
+            path="/sign-up"
+            render={() => (user ? <Redirect to="/" /> : <SignUp />)}
+          />
+          <Route
+            path="/sign-in"
+            render={() => (user ? <Redirect to="/" /> : <SignIn />)}
+          />
+          <Route
+            path="/"
+            render={({ location }) =>
+              user ? (
+                <Home />
+              ) : (
+                <Redirect
+                  to={{ pathname: '/sign-in', state: { from: location } }}
+                />
+              )
+            }
+          />
+        </Switch>
+      </Container>
     </Router>
   );
 };

@@ -15,7 +15,6 @@ import { setUser } from '~/feature/user/UserSlice';
 
 import { StyledCardActions, StyledCardHeader } from './styled';
 
-import { Container } from '~/components/templates';
 import { StyledLink } from '~/components/atoms';
 import { Form } from '~/components/molecules';
 
@@ -49,53 +48,46 @@ const SignIn = () => {
   };
 
   return (
-    <Container>
-      <Form>
-        {error && (
-          <Alert variant="outlined" severity="error">
-            {error}
-          </Alert>
-        )}
-        <StyledCardHeader
-          title="Sign in"
-          subheader={
-            <p>
-              Not registered yet? <StyledLink to="/sign-up">Sign up</StyledLink>
-              !
-            </p>
-          }
+    <Form>
+      {error && (
+        <Alert variant="outlined" severity="error">
+          {error}
+        </Alert>
+      )}
+      <StyledCardHeader
+        title="Sign in"
+        subheader={
+          <p>
+            Not registered yet? <StyledLink to="/sign-up">Sign up</StyledLink>!
+          </p>
+        }
+      />
+      <CardContent>
+        <TextField
+          margin="dense"
+          type="email"
+          label="E-mail"
+          fullWidth
+          onChange={(e) => setEmail(e.target.value)}
         />
-        <CardContent>
-          <TextField
-            margin="dense"
-            type="email"
-            label="E-mail"
-            fullWidth
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <TextField
-            margin="dense"
-            type="password"
-            label="Password"
-            fullWidth
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </CardContent>
-        <StyledCardActions>
-          {loading ? (
-            <CircularProgress />
-          ) : (
-            <Button
-              disabled={!isValid}
-              variant="outlined"
-              onClick={handleSignIn}
-            >
-              Sign in
-            </Button>
-          )}
-        </StyledCardActions>
-      </Form>
-    </Container>
+        <TextField
+          margin="dense"
+          type="password"
+          label="Password"
+          fullWidth
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </CardContent>
+      <StyledCardActions>
+        {loading ? (
+          <CircularProgress />
+        ) : (
+          <Button disabled={!isValid} variant="outlined" onClick={handleSignIn}>
+            Sign in
+          </Button>
+        )}
+      </StyledCardActions>
+    </Form>
   );
 };
 

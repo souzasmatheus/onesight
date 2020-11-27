@@ -17,7 +17,6 @@ import { auth } from '~/services/firebase';
 
 import { setUser } from '~/feature/user/UserSlice';
 
-import { Container } from '~/components/templates';
 import { StyledLink } from '~/components/atoms';
 import { Form } from '~/components/molecules';
 
@@ -60,60 +59,54 @@ const SignUp = () => {
   };
 
   return (
-    <Container>
-      <Form>
-        {error && (
-          <Alert variant="outlined" severity="error">
-            {error}
-          </Alert>
-        )}
-        <StyledCardHeader
-          title="Sign Up"
-          subheader={
-            <p>
-              Already registered?{' '}
-              <StyledLink to="/sign-in">Sign in now</StyledLink>!
-            </p>
-          }
+    <Form>
+      {error && (
+        <Alert variant="outlined" severity="error">
+          {error}
+        </Alert>
+      )}
+      <StyledCardHeader
+        title="Sign Up"
+        subheader={
+          <p>
+            Already registered?{' '}
+            <StyledLink to="/sign-in">Sign in now</StyledLink>!
+          </p>
+        }
+      />
+      <CardContent>
+        <TextField
+          margin="dense"
+          type="email"
+          label="E-mail"
+          fullWidth
+          onChange={(e) => setEmail(e.target.value)}
         />
-        <CardContent>
-          <TextField
-            margin="dense"
-            type="email"
-            label="E-mail"
-            fullWidth
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <TextField
-            margin="dense"
-            type="password"
-            label="Password"
-            fullWidth
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <TextField
-            margin="dense"
-            type="password"
-            label="Confirm password"
-            fullWidth
-            onChange={(e) => setConfirmationPassword(e.target.value)}
-          />
-        </CardContent>
-        <StyledCardActions>
-          {loading ? (
-            <CircularProgress />
-          ) : (
-            <Button
-              disabled={!isValid}
-              variant="outlined"
-              onClick={handleSignUp}
-            >
-              Sign up
-            </Button>
-          )}
-        </StyledCardActions>
-      </Form>
-    </Container>
+        <TextField
+          margin="dense"
+          type="password"
+          label="Password"
+          fullWidth
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <TextField
+          margin="dense"
+          type="password"
+          label="Confirm password"
+          fullWidth
+          onChange={(e) => setConfirmationPassword(e.target.value)}
+        />
+      </CardContent>
+      <StyledCardActions>
+        {loading ? (
+          <CircularProgress />
+        ) : (
+          <Button disabled={!isValid} variant="outlined" onClick={handleSignUp}>
+            Sign up
+          </Button>
+        )}
+      </StyledCardActions>
+    </Form>
   );
 };
 
