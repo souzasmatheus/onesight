@@ -1,42 +1,82 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import CardContent from '@material-ui/core/CardContent';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
-import { StyledCardActions, StyledCardHeader } from './styled';
+import {
+  isValidEmail,
+  isValidPassword,
+  passwordsAreEqual,
+} from '~/lib/validation';
 
 import { Container } from '~/components/templates';
 import { StyledLink } from '~/components/atoms';
 import { Form } from '~/components/molecules';
 
-const SignUp = () => (
-  <Container>
-    <Form>
-      <StyledCardHeader
-        title="Sign Up"
-        subheader={
-          <p>
-            Already registered?{' '}
-            <StyledLink to="/sign-in">Sign in now</StyledLink>!
-          </p>
-        }
-      />
-      <CardContent>
-        <TextField margin="dense" type="email" label="E-mail" fullWidth />
-        <TextField margin="dense" type="password" label="Password" fullWidth />
-        <TextField
-          margin="dense"
-          type="password"
-          label="Confirm password"
-          fullWidth
+import { StyledCardActions, StyledCardHeader } from './styled';
+
+const SignUp = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmationPassword, setConfirmationPassword] = useState('');
+  const [isValid, setValid] = useState(false);
+
+  useEffect(() => {
+    if (
+      isValidEmail(email) &&
+      isValidPassword(password) &&
+      passwordsAreEqual(password, confirmationPassword)
+    ) {
+      setValid(true);
+    } else {
+      setValid(false);
+    }
+  }, [email, password, confirmationPassword]);
+
+  return (
+    <Container>
+      <Form>
+        <StyledCardHeader
+          title="Sign Up"
+          subheader={
+            <p>
+              Already registered?{' '}
+              <StyledLink to="/sign-in">Sign in now</StyledLink>!
+            </p>
+          }
         />
-      </CardContent>
-      <StyledCardActions>
-        <Button variant="outlined">Sign up</Button>
-      </StyledCardActions>
-    </Form>
-  </Container>
-);
+        <CardContent>
+          <TextField
+            margin="dense"
+            type="email"
+            label="E-mail"
+            fullWidth
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <TextField
+            margin="dense"
+            type="password"
+            label="Password"
+            fullWidth
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <TextField
+            margin="dense"
+            type="password"
+            label="Confirm password"
+            fullWidth
+            onChange={(e) => setConfirmationPassword(e.target.value)}
+          />
+        </CardContent>
+        <StyledCardActions>
+          <Button disabled={!isValid} variant="outlined">
+            Sign up
+          </Button>
+        </StyledCardActions>
+      </Form>
+    </Container>
+  );
+};
 
 export default SignUp;
