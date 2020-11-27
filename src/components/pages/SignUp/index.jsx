@@ -53,7 +53,6 @@ const SignUp = () => {
         password,
       );
       dispatch(setUser(user));
-      setLoading(false);
     } catch (e) {
       setLoading(false);
       setError(e.message);

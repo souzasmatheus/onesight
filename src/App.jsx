@@ -19,23 +19,11 @@ const App = () => {
       <Switch>
         <Route
           path="/sign-up"
-          render={({ location }) =>
-            user ? (
-              <Redirect to={{ pathname: '/', state: { from: location } }} />
-            ) : (
-              <SignUp />
-            )
-          }
+          render={() => (user ? <Redirect to="/" /> : <SignUp />)}
         />
         <Route
           path="/sign-in"
-          render={({ location }) =>
-            user ? (
-              <Redirect to={{ pathname: '/', state: { from: location } }} />
-            ) : (
-              <SignIn />
-            )
-          }
+          render={() => (user ? <Redirect to="/" /> : <SignIn />)}
         />
         <Route
           path="/"
