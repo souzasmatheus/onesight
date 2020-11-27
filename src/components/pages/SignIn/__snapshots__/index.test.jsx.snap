@@ -5,145 +5,13 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <main
-        class="sc-gKsewC eZbHyU"
-      >
-        <header
-          class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary sc-hKgILt jUaaXm MuiPaper-elevation4"
-        >
-          <div
-            class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
-          >
-            <img
-              alt="logo"
-              class="sc-dlfnbm iDNTML"
-              src="logo.png"
-            />
-          </div>
-        </header>
-        <div
-          class="sc-jSgupP fTaIqy"
-        >
-          <div
-            class="MuiPaper-root MuiCard-root sc-eCssSg fequey MuiPaper-elevation1 MuiPaper-rounded"
-          >
-            <div
-              class="MuiCardHeader-root sc-gsTCUz iNdqRX"
-            >
-              <div
-                class="MuiCardHeader-content"
-              >
-                <span
-                  class="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-displayBlock"
-                >
-                  Sign in
-                </span>
-                <span
-                  class="MuiTypography-root MuiCardHeader-subheader MuiTypography-body1 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
-                >
-                  <p>
-                    Not registered yet? 
-                    <a
-                      class="sc-iBPRYJ gQvTMv"
-                      href="/sign-up"
-                    >
-                      Sign up
-                    </a>
-                    !
-                  </p>
-                </span>
-              </div>
-            </div>
-            <div
-              class="MuiCardContent-root"
-            >
-              <div
-                class="MuiFormControl-root MuiTextField-root MuiFormControl-marginDense MuiFormControl-fullWidth"
-              >
-                <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense"
-                  data-shrink="false"
-                >
-                  E-mail
-                </label>
-                <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-marginDense MuiInput-marginDense"
-                >
-                  <input
-                    aria-invalid="false"
-                    class="MuiInputBase-input MuiInput-input MuiInputBase-inputMarginDense MuiInput-inputMarginDense"
-                    type="email"
-                    value=""
-                  />
-                </div>
-              </div>
-              <div
-                class="MuiFormControl-root MuiTextField-root MuiFormControl-marginDense MuiFormControl-fullWidth"
-              >
-                <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense"
-                  data-shrink="false"
-                >
-                  Password
-                </label>
-                <div
-                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-marginDense MuiInput-marginDense"
-                >
-                  <input
-                    aria-invalid="false"
-                    class="MuiInputBase-input MuiInput-input MuiInputBase-inputMarginDense MuiInput-inputMarginDense"
-                    type="password"
-                    value=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class="MuiCardActions-root sc-bdfBwQ dWoOti MuiCardActions-spacing"
-            >
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-outlined"
-                tabindex="0"
-                type="button"
-              >
-                <span
-                  class="MuiButton-label"
-                >
-                  Sign in
-                </span>
-                <span
-                  class="MuiTouchRipple-root"
-                />
-              </button>
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
-  </body>,
-  "container": <div>
-    <main
-      class="sc-gKsewC eZbHyU"
-    >
-      <header
-        class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary sc-hKgILt jUaaXm MuiPaper-elevation4"
-      >
-        <div
-          class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
-        >
-          <img
-            alt="logo"
-            class="sc-dlfnbm iDNTML"
-            src="logo.png"
-          />
-        </div>
-      </header>
       <div
-        class="sc-jSgupP fTaIqy"
+        class="sc-gKsewC hJJWkx"
       >
         <div
-          class="MuiPaper-root MuiCard-root sc-eCssSg fequey MuiPaper-elevation1 MuiPaper-rounded"
+          class="MuiPaper-root MuiCard-root sc-jSgupP boYLPn MuiPaper-elevation1 MuiPaper-rounded"
         >
+          
           <div
             class="MuiCardHeader-root sc-gsTCUz iNdqRX"
           >
@@ -161,7 +29,7 @@ Object {
                 <p>
                   Not registered yet? 
                   <a
-                    class="sc-iBPRYJ gQvTMv"
+                    class="sc-dlfnbm drfFgG"
                     href="/sign-up"
                   >
                     Sign up
@@ -219,8 +87,9 @@ Object {
             class="MuiCardActions-root sc-bdfBwQ dWoOti MuiCardActions-spacing"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-outlined"
-              tabindex="0"
+              class="MuiButtonBase-root MuiButton-root MuiButton-outlined Mui-disabled Mui-disabled"
+              disabled=""
+              tabindex="-1"
               type="button"
             >
               <span
@@ -228,14 +97,109 @@ Object {
               >
                 Sign in
               </span>
-              <span
-                class="MuiTouchRipple-root"
-              />
             </button>
           </div>
         </div>
       </div>
-    </main>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="sc-gKsewC hJJWkx"
+    >
+      <div
+        class="MuiPaper-root MuiCard-root sc-jSgupP boYLPn MuiPaper-elevation1 MuiPaper-rounded"
+      >
+        
+        <div
+          class="MuiCardHeader-root sc-gsTCUz iNdqRX"
+        >
+          <div
+            class="MuiCardHeader-content"
+          >
+            <span
+              class="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-displayBlock"
+            >
+              Sign in
+            </span>
+            <span
+              class="MuiTypography-root MuiCardHeader-subheader MuiTypography-body1 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+            >
+              <p>
+                Not registered yet? 
+                <a
+                  class="sc-dlfnbm drfFgG"
+                  href="/sign-up"
+                >
+                  Sign up
+                </a>
+                !
+              </p>
+            </span>
+          </div>
+        </div>
+        <div
+          class="MuiCardContent-root"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginDense MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense"
+              data-shrink="false"
+            >
+              E-mail
+            </label>
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-marginDense MuiInput-marginDense"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiInput-input MuiInputBase-inputMarginDense MuiInput-inputMarginDense"
+                type="email"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class="MuiFormControl-root MuiTextField-root MuiFormControl-marginDense MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense"
+              data-shrink="false"
+            >
+              Password
+            </label>
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-marginDense MuiInput-marginDense"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiInput-input MuiInputBase-inputMarginDense MuiInput-inputMarginDense"
+                type="password"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiCardActions-root sc-bdfBwQ dWoOti MuiCardActions-spacing"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-outlined Mui-disabled Mui-disabled"
+            disabled=""
+            tabindex="-1"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              Sign in
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
