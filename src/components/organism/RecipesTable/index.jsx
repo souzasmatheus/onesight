@@ -6,14 +6,13 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import TableBody from '@material-ui/core/TableBody';
-import IconButton from '@material-ui/core/IconButton';
 import Paper from '@material-ui/core/Paper';
 
-import VideoIcon from '@material-ui/icons/OndemandVideo';
+import { RecipeInfo } from '~/components/molecules';
 
 import { recipesSelector } from '~/feature/recipes/RecipesSlice';
 
-import { StyledTableContainer, StyledAvatar } from './styled';
+import { StyledTableContainer } from './styled';
 
 const RecipesTable = () => {
   const { recipes } = useSelector(recipesSelector);
@@ -23,30 +22,21 @@ const RecipesTable = () => {
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell align="center">Click to expand</TableCell>
-            <TableCell align="right">Recipe</TableCell>
-            <TableCell align="right">Category</TableCell>
-            <TableCell align="right">Watch now!</TableCell>
+            <TableCell />
+            <TableCell align="center">Recipe</TableCell>
+            <TableCell align="center">Category</TableCell>
+            <TableCell align="center">Watch now!</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {recipes?.map((recipe) => (
-            <TableRow>
-              <TableCell align="left">
-                <StyledAvatar src={`${recipe?.strMealThumb}`} />
-              </TableCell>
-              <TableCell align="right">{recipe?.strMeal}</TableCell>
-              <TableCell align="right">{recipe?.strCategory}</TableCell>
-              <TableCell align="right">
-                <IconButton
-                  onClick={() => {
-                    window.open(recipe?.strYoutube);
-                  }}
-                >
-                  <VideoIcon />
-                </IconButton>
-              </TableCell>
-            </TableRow>
+            <RecipeInfo
+              src={recipe?.strMealThumb}
+              name={recipe.strMeal}
+              category={recipe.strCategory}
+              link={recipe?.strYoutube}
+              description={recipe?.strInstructions}
+            />
           ))}
         </TableBody>
       </Table>
